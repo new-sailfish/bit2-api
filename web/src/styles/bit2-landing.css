@@ -209,7 +209,13 @@
     height: 44px;
     flex: none;
   }
-  .bit2-brand > span {
+  .bit2-brand > img {
+    width: 42px;
+    height: 42px;
+    flex: none;
+    object-fit: contain;
+  }
+  .bit2-brand-copy {
     color: inherit;
     font-size: 1.3rem;
     line-height: 1.2;

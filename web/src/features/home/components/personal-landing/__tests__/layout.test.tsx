@@ -17,8 +17,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 For commercial licensing, please contact support@quantumnous.com
 */
 import { fireEvent, render, screen, within } from '@testing-library/react'
+import i18next from 'i18next'
 import type { ReactNode } from 'react'
-import { describe, expect, test, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
 
 import { PersonalLanding } from '..'
 
@@ -39,6 +40,15 @@ vi.mock('@/components/theme-switch', () => ({
 }))
 
 describe('personal landing layout', () => {
+  beforeEach(async () => {
+    await i18next.changeLanguage('en')
+    document.documentElement.lang = 'en'
+  })
+
+  afterEach(async () => {
+    await i18next.changeLanguage('en')
+  })
+
   test('when signed out, exposes model navigation and demo pricing content', () => {
     render(<PersonalLanding isAuthenticated={false} />)
 
@@ -88,6 +98,47 @@ describe('personal landing layout', () => {
     for (const logo of logos) {
       expect(logo).toHaveAttribute('src', '/new-api-logo.svg')
     }
+  })
+
+  test('uses the Bit2 rabbit mark for both brand links', () => {
+    render(<PersonalLanding isAuthenticated={false} />)
+
+    const brandLinks = screen.getAllByRole('link', { name: /比特兔/i })
+    expect(brandLinks).toHaveLength(2)
+    for (const brandLink of brandLinks) {
+      expect(brandLink.querySelector('img')).toHaveAttribute(
+        'src',
+        '/bit2-logo.svg'
+      )
+    }
+  })
+
+  test('switches the whole page language and document locale together', async () => {
+    i18next.addResourceBundle(
+      'zhCN',
+      'translation',
+      {
+        'Build with the next generation of GPT.': '使用新一代 GPT 模型',
+        'Start for free': '免费开始',
+        'A few useful answers before you start': '开始前的常见问题',
+      },
+      true,
+      true
+    )
+
+    render(<PersonalLanding isAuthenticated={false} />)
+    await i18next.changeLanguage('zhCN')
+
+    expect(
+      await screen.findByRole('heading', { name: /使用新一代 GPT 模型/ })
+    ).toBeInTheDocument()
+    expect(
+      screen.getAllByRole('link', { name: '免费开始' }).length
+    ).toBeGreaterThan(0)
+    expect(
+      screen.getByRole('heading', { name: '开始前的常见问题' })
+    ).toBeInTheDocument()
+    expect(document.documentElement.lang).toBe('zh-CN')
   })
 
   test('keeps the Python integration example available below the mascot hero', () => {

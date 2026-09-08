@@ -17,11 +17,12 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 For commercial licensing, please contact support@quantumnous.com
 */
 import { Link } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { LanguageSwitcher } from '@/components/language-switcher'
 import { ThemeSwitch } from '@/components/theme-switch'
+import { toIntlLocale } from '@/i18n/languages'
 
 import { LandingIcon, type LandingIconName } from './landing-icon'
 
@@ -212,8 +213,14 @@ const FOOTER_COLUMNS = [
 ] as const
 
 export function PersonalLanding(props: PersonalLandingProps) {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [announcementVisible, setAnnouncementVisible] = useState(true)
+  const activeLanguage = i18n.resolvedLanguage ?? i18n.language
+
+  useEffect(() => {
+    const locale = toIntlLocale(activeLanguage)
+    if (locale) document.documentElement.lang = locale
+  }, [activeLanguage])
 
   const primaryAction = props.isAuthenticated ? (
     <Link to='/dashboard' className='landing-button landing-button--primary'>
@@ -255,25 +262,14 @@ export function PersonalLanding(props: PersonalLandingProps) {
           <div className='landing-container landing-nav-inner'>
             <Link to='/' className='landing-brand bit2-landing-brand'>
               <span className='bit2-brand'>
-                <svg aria-hidden viewBox='0 0 48 58'>
-                  <path
-                    d='M12 27C3 1 18-3 20 23L25 23C25-4 42-1 33 28C49 45 38 55 24 55C6 55 0 41 12 27Z'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='2.5'
-                    strokeLinejoin='round'
-                  />
-                  <circle cx='17' cy='37' r='2' />
-                  <circle cx='30' cy='37' r='2' />
-                  <path
-                    d='m21 43 3 2 3-2m-3 2v3m-5 0q5 3 10 0'
-                    fill='none'
-                    stroke='currentColor'
-                    strokeWidth='2'
-                    strokeLinecap='round'
-                  />
-                </svg>
-                <span>
+                <img
+                  src='/bit2-logo.svg'
+                  alt=''
+                  aria-hidden
+                  width='42'
+                  height='42'
+                />
+                <span className='bit2-brand-copy'>
                   比特兔<small>bit2.ai</small>
                 </span>
               </span>
@@ -374,7 +370,9 @@ export function PersonalLanding(props: PersonalLandingProps) {
               </div>
 
               <div className='bit2-illustration' id='developers'>
-                <span className='bit2-note'>Simple. Fast. Friendly.</span>
+                <span className='bit2-note'>
+                  {t('Simple. Fast. Friendly.')}
+                </span>
                 <div className='bit2-halo' aria-hidden />
                 <img
                   src='/bit2-mascot.png'
@@ -690,25 +688,14 @@ export function PersonalLanding(props: PersonalLandingProps) {
             <section className='landing-footer-brand'>
               <Link to='/' className='landing-brand bit2-footer-brand'>
                 <span className='bit2-brand'>
-                  <svg aria-hidden viewBox='0 0 48 58'>
-                    <path
-                      d='M12 27C3 1 18-3 20 23L25 23C25-4 42-1 33 28C49 45 38 55 24 55C6 55 0 41 12 27Z'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2.5'
-                      strokeLinejoin='round'
-                    />
-                    <circle cx='17' cy='37' r='2' />
-                    <circle cx='30' cy='37' r='2' />
-                    <path
-                      d='m21 43 3 2 3-2m-3 2v3m-5 0q5 3 10 0'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2'
-                      strokeLinecap='round'
-                    />
-                  </svg>
-                  <span>
+                  <img
+                    src='/bit2-logo.svg'
+                    alt=''
+                    aria-hidden
+                    width='42'
+                    height='42'
+                  />
+                  <span className='bit2-brand-copy'>
                     比特兔<small>bit2.ai</small>
                   </span>
                 </span>
