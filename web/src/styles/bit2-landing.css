@@ -1,0 +1,432 @@
+@layer components {
+  .bit2-landing {
+    --landing-bg: #fcfaf6;
+    --landing-surface: #fffdf9;
+    --landing-text: #292923;
+    --landing-text-soft: #736e65;
+    --landing-line: #eae1d5;
+    --landing-indigo: #df7539;
+    --landing-indigo-dark: #ab5025;
+    background: #fcfaf6;
+  }
+  .bit2-landing .landing-announcement {
+    background: #f5eadd;
+    color: #795536;
+  }
+  .bit2-landing .landing-announcement-inner a {
+    color: #a24d24;
+  }
+  .bit2-landing .landing-nav {
+    background: #fcfaf6;
+    border-color: #eee6dc;
+  }
+  .bit2-landing .landing-nav::after {
+    display: none;
+  }
+  .bit2-landing .landing-hero-meta i {
+    background: #d98245;
+    box-shadow: 0 0 0 3px #d9824514;
+  }
+  .bit2-landing .landing-cta-actions .landing-button--primary {
+    background: #dc7435;
+    color: #fff !important;
+  }
+  .bit2-landing .landing-pricing-note {
+    background: #fff5e8;
+    border-color: #ead9c4;
+  }
+  .bit2-landing .landing-pricing-note strong,
+  .bit2-landing .landing-pricing-note > a,
+  .bit2-landing .landing-price-footer a,
+  .bit2-landing .landing-eyebrow--light {
+    color: #995027;
+  }
+  .bit2-landing .landing-cta-orb {
+    background: linear-gradient(140deg, #ffe9c5, #f8b773);
+    color: #914b25;
+  }
+  .bit2-landing .landing-brand {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .bit2-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+  .bit2-brand small {
+    font-size: 0.8rem;
+    color: #9c633c;
+  }
+  .bit2-brand > span {
+    color: #d87239;
+    font-size: 2rem;
+  }
+  .bit2-landing .landing-hero {
+    background:
+      radial-gradient(ellipse at 80% 70%, #f4dec3, transparent 55%), #fcfaf6;
+    color: #242722;
+  }
+  .bit2-landing .landing-hero::before,
+  .bit2-landing .landing-hero::after,
+  .bit2-landing .landing-hero-noise {
+    display: none;
+  }
+  .bit2-landing .landing-hero-inner {
+    gap: 1rem;
+    min-height: 39rem;
+    padding-block: 3rem;
+    grid-template-columns: 1fr 1.15fr;
+  }
+  .bit2-landing .landing-hero h1 {
+    font-family: inherit;
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+  }
+  .bit2-landing .landing-hero h1 span {
+    background: none;
+    color: #d8753f;
+    margin-top: 0.2rem;
+  }
+  .bit2-landing .landing-eyebrow--hero {
+    color: #9b694b;
+  }
+  .bit2-landing .landing-hero-description,
+  .bit2-landing .landing-hero-meta {
+    color: #736e65;
+  }
+  .bit2-landing .landing-button--primary {
+    background: #e67d40;
+    box-shadow: 0 7px 18px #c7763620;
+    border-radius: 999px;
+  }
+  .bit2-landing .landing-button--primary:hover {
+    background: #cd6530;
+  }
+  .bit2-landing .landing-button--secondary {
+    color: #574c40;
+    border-color: #dfd4c7;
+    background: #fffdf980;
+    border-radius: 999px;
+  }
+  .bit2-illustration {
+    position: relative;
+  }
+  .bit2-illustration img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .bit2-note {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transform: rotate(-9deg);
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #89674d;
+  }
+  .bit2-landing .landing-models-section,
+  .bit2-landing .landing-steps-section {
+    background: #f7f2e9;
+  }
+  .bit2-landing .landing-feature {
+    background: #fffdf9;
+    border-color: #eae1d5;
+  }
+  .bit2-landing .landing-price-card.is-featured {
+    background: #fff8ef;
+    border-color: #eab38b;
+  }
+  .bit2-landing .landing-price-card::before {
+    background: linear-gradient(90deg, #efad70, #dd7135);
+  }
+  .bit2-landing .landing-feature-icon,
+  .bit2-landing .landing-model-icon,
+  .bit2-landing .landing-step-number {
+    background: #fff0de;
+    color: #b7612e;
+    border-color: #edd6bb;
+  }
+  .bit2-landing .landing-section {
+    padding-block: 5rem;
+  }
+  .bit2-landing .landing-price-card h3 {
+    font-family: inherit;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+  }
+  .bit2-landing .landing-container {
+    max-width: 1320px;
+    width: calc(100% - 5rem);
+  }
+  .bit2-landing .landing-nav-inner {
+    min-height: 6rem;
+    gap: 1.25rem;
+  }
+  .bit2-landing .landing-nav .landing-brand {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    flex: none;
+  }
+  .bit2-landing .landing-brand .bit2-brand {
+    display: flex;
+    gap: 0.65rem;
+    color: #20242c;
+  }
+  .bit2-attribution {
+    align-items: center;
+    color: #a4998d;
+    display: inline-flex;
+    font-size: 0.62rem;
+    font-weight: 600;
+    gap: 0.28rem;
+    letter-spacing: 0.01em;
+    margin-left: 2.35rem;
+    opacity: 0.72;
+  }
+  .bit2-attribution img {
+    height: 0.82rem;
+    opacity: 0.68;
+    width: 0.82rem;
+  }
+  .bit2-footer-brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .bit2-footer-brand .bit2-attribution {
+    margin-left: 2.1rem;
+  }
+  .bit2-brand svg {
+    width: 37px;
+    height: 44px;
+    flex: none;
+  }
+  .bit2-brand > span {
+    color: inherit;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  .bit2-brand small {
+    display: block;
+    color: inherit;
+    font-size: 0.95rem;
+    margin-top: 0.15rem;
+  }
+  .bit2-landing .landing-hero-inner {
+    min-height: 43rem;
+    grid-template-columns: 1.05fr 1fr;
+    padding-block: 3rem 4rem;
+  }
+  .bit2-landing .landing-hero h1 {
+    font-size: clamp(2.4rem, 3.7vw, 3.8rem);
+    line-height: 1.3;
+    color: #1d2430;
+  }
+  .bit2-landing .landing-hero h1 span {
+    color: #1d2430;
+  }
+  .bit2-landing .landing-hero-description {
+    font-size: 1.15rem;
+    max-width: 30rem;
+    margin-block: 1.7rem 2rem;
+  }
+  .bit2-landing .landing-eyebrow--hero {
+    font-size: 0.95rem;
+    color: #737782;
+    letter-spacing: 0.02em;
+  }
+  .bit2-landing .landing-hero {
+    background:
+      radial-gradient(ellipse at 75% 75%, #f9e8d3 0, transparent 55%), #fcfaf7;
+  }
+  .bit2-landing .landing-button {
+    min-height: 3.3rem;
+    padding-inline: 1.5rem;
+    font-weight: 650;
+  }
+  .bit2-landing .landing-login {
+    background: #fffdf9;
+    border-color: #efe7dc;
+    border-radius: 999px;
+    color: #252933;
+  }
+  .bit2-illustration {
+    min-width: 0;
+    isolation: isolate;
+  }
+  .bit2-illustration img {
+    width: 100%;
+    height: 36rem;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 18px #bc865620);
+  }
+  .bit2-halo {
+    position: absolute;
+    inset: 20% 0 0;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, #f5d1a780, transparent 70%);
+    z-index: -1;
+  }
+  .bit2-note {
+    top: 0;
+    right: 0;
+    font-size: 1.05rem;
+  }
+  .bit2-model-chip {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 1.25rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.75rem;
+    box-shadow:
+      0 12px 30px #86634a14,
+      inset 0 1px 3px #fff;
+  }
+  .bit2-model-chip strong {
+    display: block;
+    font-size: 1.35rem;
+    margin-top: 0.2rem;
+  }
+  .bit2-model-chip--astra {
+    left: 0;
+    top: 27%;
+    background: #dcefe5;
+    color: #345d4c;
+    transform: rotate(-10deg);
+  }
+  .bit2-model-chip--sol {
+    right: -1rem;
+    top: 24%;
+    background: #eee7fa;
+    color: #665881;
+    transform: rotate(10deg);
+  }
+  .bit2-model-chip--terra {
+    right: 0;
+    bottom: 12%;
+    background: #ffe5c8;
+    color: #8d572f;
+    transform: rotate(-6deg);
+  }
+  .bit2-landing .landing-trust-strip {
+    background: #fcfaf7;
+    border-color: #e9dfd2;
+  }
+  .bit2-landing .landing-trust-label,
+  .bit2-landing .landing-trust-items span {
+    color: #62676c;
+  }
+  .bit2-landing .landing-trust-items svg {
+    color: #e47737;
+    stroke: #e47737;
+  }
+  .bit2-landing .landing-features-section,
+  .bit2-landing .landing-faq-section,
+  .bit2-landing .landing-cta-section {
+    background: #fcfaf7;
+  }
+  .bit2-landing .landing-price-label,
+  .bit2-landing .landing-price-card.is-featured .landing-price-label {
+    background: #f7ebdc;
+    color: #895332;
+  }
+  .bit2-landing .landing-feature:nth-child(n) .landing-feature-icon {
+    background: #fff0de;
+    border-color: #edd6bb;
+    color: #bd6631;
+  }
+  .bit2-landing .landing-cta-box {
+    background: linear-gradient(120deg, #f7e9d7, #ffedd8);
+    color: #312c27;
+    box-shadow: none;
+    border: 1px solid #efdbc2;
+  }
+  .bit2-landing .landing-cta-box h2,
+  .bit2-landing .landing-cta-box p:last-child {
+    color: #4c4035;
+  }
+  .bit2-landing .landing-button--outline {
+    color: #764b2d;
+    border-color: #cdb494;
+    background: #fff8ee;
+  }
+  .bit2-landing .landing-footer {
+    background: #f5efe6;
+    color: #54493d;
+  }
+  .bit2-landing .landing-footer-brand p,
+  .bit2-landing .landing-footer-column a,
+  .bit2-landing .landing-copyright,
+  .bit2-landing .landing-social-links a {
+    color: #766b60;
+  }
+  .bit2-landing .landing-footer-column h2 {
+    color: #332d28;
+  }
+  .bit2-landing .landing-copyright,
+  .bit2-landing .landing-social-links a {
+    border-color: #e1d6c8;
+  }
+  @media (max-width: 1100px) {
+    .bit2-landing .landing-nav-links {
+      display: none;
+    }
+  }
+  @media (max-width: 900px) {
+    .bit2-landing .landing-hero-inner {
+      grid-template-columns: 1fr;
+    }
+    .bit2-illustration {
+      max-width: 36rem;
+      margin-inline: auto;
+    }
+    .bit2-landing .landing-hero-copy {
+      max-width: 40rem;
+    }
+    .bit2-landing .landing-container {
+      width: calc(100% - 2.5rem);
+    }
+    .bit2-landing .landing-hero-inner {
+      padding-top: 2rem;
+      gap: 2rem;
+    }
+    .bit2-illustration img {
+      height: auto;
+      max-height: 32rem;
+    }
+    .bit2-model-chip--sol {
+      right: 0;
+    }
+  }
+  @media (max-width: 480px) {
+    .bit2-landing .landing-nav-actions {
+      gap: 0.25rem;
+    }
+    .bit2-landing .landing-nav-actions .landing-button {
+      padding-inline: 0.8rem;
+      font-size: 0.8rem;
+    }
+    .bit2-landing .landing-nav-inner {
+      flex-wrap: wrap;
+      padding-block: 0.8rem;
+    }
+    .bit2-landing .landing-hero h1 {
+      font-size: 2.4rem;
+    }
+    .bit2-model-chip {
+      padding: 0.6rem;
+      font-size: 0.65rem;
+    }
+    .bit2-model-chip strong {
+      font-size: 1rem;
+    }
+  }
+}
