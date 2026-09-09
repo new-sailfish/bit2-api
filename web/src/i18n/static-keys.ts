@@ -43,6 +43,21 @@ export const STATIC_I18N_KEYS = [
   'Docs',
   'About',
 
+  // Personal landing page data arrays
+  'A clearer path to the right model',
+  'Visible by design',
+  'Centralize authentication and upstream access behind one managed gateway, with the controls your deployment already needs.',
+  'A balanced choice for chat, vision, and complex workflows.',
+  'Open the console, create a key for your project, and keep it separate from production secrets while you prototype.',
+  'Replace base_url',
+  'Send the request, inspect usage, and promote the same integration when your application is ready for real traffic.',
+  'GPT models',
+  'Features',
+  'Developers',
+  'API documentation',
+  'Common questions',
+  'GitHub repository',
+
   // Sidebar views (drill-in workspaces)
   'System Settings',
   'Back to Dashboard',

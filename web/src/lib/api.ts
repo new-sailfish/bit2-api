@@ -70,7 +70,12 @@ export async function getUserGroups(): Promise<{
 // ============================================================================
 
 export async function getStatus() {
-  const res = await api.get('/api/status')
+  const res = await api.get('/api/status', {
+    // Status is optional for the public landing page. The app can still use
+    // cached/default values while the backend is starting or unavailable.
+    skipErrorHandler: true,
+    skipBusinessError: true,
+  })
   return res.data?.data as Record<string, unknown>
 }
 
@@ -86,6 +91,10 @@ export async function getNotice(): Promise<{
   // still revalidates on every request and an admin edit shows up immediately.
   const res = await api.get('/api/notice', {
     headers: { 'Cache-Control': null },
+    // Notifications are a background enhancement and must not interrupt a
+    // public page when the backend is unavailable.
+    skipErrorHandler: true,
+    skipBusinessError: true,
   })
   return res.data
 }

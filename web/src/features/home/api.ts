@@ -34,6 +34,10 @@ export async function getHomePageContent(): Promise<HomePageContentResponse> {
   // 304. Server-side `no-cache` keeps admin edits immediate.
   const res = await api.get('/api/home_page_content', {
     headers: { 'Cache-Control': null },
+    // Custom home content is optional; the built-in landing page is the
+    // fallback when this endpoint is absent or the backend is offline.
+    skipErrorHandler: true,
+    skipBusinessError: true,
   })
   return res.data
 }

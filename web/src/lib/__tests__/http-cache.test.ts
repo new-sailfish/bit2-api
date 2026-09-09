@@ -76,3 +76,19 @@ it('public notices keep their existing ETag revalidation policy', async () => {
   await getNotice()
   expect(adapter.mock.calls[0][0].headers.get('Cache-Control')).toBeNull()
 })
+
+it('optional public bootstrap requests do not surface transport or business errors', async () => {
+  const adapter = vi.fn<AxiosAdapter>(async (config) => ({
+    data: { success: true, data: '' },
+    status: 200,
+    statusText: 'OK',
+    headers: {},
+    config,
+  }))
+  api.defaults.adapter = adapter
+
+  await getNotice()
+
+  expect(adapter.mock.calls[0][0].skipErrorHandler).toBe(true)
+  expect(adapter.mock.calls[0][0].skipBusinessError).toBe(true)
+})

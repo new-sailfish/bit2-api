@@ -259,7 +259,8 @@ describe('vendor management', () => {
     const get = vi
       .spyOn(api, 'get')
       .mockImplementation(async (_url, config) => {
-        if (config?.params?.p === 2) {
+        const page = (config?.params as { p?: number } | undefined)?.p
+        if (page === 2) {
           return new Promise((resolve) => {
             finishPage = resolve
           })

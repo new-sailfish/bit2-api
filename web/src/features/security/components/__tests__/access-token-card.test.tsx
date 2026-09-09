@@ -81,11 +81,12 @@ beforeEach(() => {
       return { data: { success: true, data: { items: [], total: 0 } } }
     }
     if (url === '/api/verify/methods') {
+      const scope = (config?.params as { scope?: string } | undefined)?.scope
       return {
         data: {
           success: true,
           data: {
-            scope: config?.params?.scope,
+            scope,
             methods: [{ method: 'password', available: true }],
             oauth_providers: [],
             password_encryption_enabled: false,

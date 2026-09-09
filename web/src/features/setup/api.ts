@@ -26,6 +26,10 @@ export async function getSetupStatus(): Promise<SetupResponse> {
     params: {
       t: Date.now(),
     },
+    // The root route treats an unavailable backend as an unknown setup state
+    // and handles the fallback itself.
+    skipErrorHandler: true,
+    skipBusinessError: true,
   })
   return res.data
 }

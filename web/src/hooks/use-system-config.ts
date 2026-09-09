@@ -159,8 +159,10 @@ export function useSystemConfig(options: UseSystemConfigOptions = {}) {
       const newConfig = await fetchSystemConfig()
       setConfig(newConfig)
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error('Failed to load system config:', error)
+      if (import.meta.env.DEV) {
+        // eslint-disable-next-line no-console
+        console.warn('[system-config] backend unavailable', error)
+      }
     } finally {
       setLoading(false)
     }
