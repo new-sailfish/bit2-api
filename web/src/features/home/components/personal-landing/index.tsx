@@ -455,7 +455,7 @@ export function PersonalLanding(props: PersonalLandingProps) {
                   <strong>05</strong>
                 </div>
                 <img
-                  src='/bit2-hero-v2.svg'
+                  src='/bit2-hero-v3.svg'
                   alt=''
                   aria-hidden
                   width='720'
@@ -466,11 +466,6 @@ export function PersonalLanding(props: PersonalLandingProps) {
                   {t('Requests flowing normally')}
                 </div>
               </div>
-            </div>
-            <div className='warm-container warm-hero-baseline' aria-hidden>
-              <span />
-              <span />
-              <span />
             </div>
           </section>
 

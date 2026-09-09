@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" fill="none">
+  <defs>
+    <linearGradient id="hero-rabbit-body" x1="180" y1="94" x2="430" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF9" />
+      <stop offset=".48" stop-color="#F7EBDD" />
+      <stop offset="1" stop-color="#D9BFA9" />
+    </linearGradient>
+    <linearGradient id="hero-rabbit-light" x1="240" y1="178" x2="362" y2="421" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDFB" />
+      <stop offset="1" stop-color="#E9D6C3" />
+    </linearGradient>
+    <linearGradient id="hero-ear" x1="216" y1="31" x2="285" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE8D2" />
+      <stop offset=".55" stop-color="#F6B18B" />
+      <stop offset="1" stop-color="#DB704B" />
+    </linearGradient>
+    <linearGradient id="hero-ear-inner" x1="241" y1="55" x2="264" y2="177" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD7C4" />
+      <stop offset="1" stop-color="#E78A6D" />
+    </linearGradient>
+    <linearGradient id="hero-scarf" x1="192" y1="337" x2="370" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB66E" />
+      <stop offset=".52" stop-color="#F78438" />
+      <stop offset="1" stop-color="#D95622" />
+    </linearGradient>
+    <linearGradient id="hero-box-front" x1="354" y1="349" x2="582" y2="502" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8D9AD" />
+      <stop offset="1" stop-color="#C9925E" />
+    </linearGradient>
+    <linearGradient id="hero-box-top" x1="334" y1="321" x2="562" y2="387" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0CD" />
+      <stop offset="1" stop-color="#EAC18D" />
+    </linearGradient>
+    <linearGradient id="hero-glass" x1="403" y1="152" x2="516" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".9" />
+      <stop offset=".42" stop-color="#D8F4EE" stop-opacity=".78" />
+      <stop offset="1" stop-color="#95D5C9" stop-opacity=".45" />
+    </linearGradient>
+    <linearGradient id="hero-glass-side" x1="489" y1="178" x2="548" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B9E5DD" stop-opacity=".72" />
+      <stop offset="1" stop-color="#62B8B1" stop-opacity=".32" />
+    </linearGradient>
+    <radialGradient id="hero-glow" cx="0" cy="0" r="1" gradientTransform="translate(412 284) rotate(90) scale(205)">
+      <stop stop-color="#FFCB9B" stop-opacity=".7" />
+      <stop offset="1" stop-color="#FFCB9B" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="hero-glass-glow" cx="0" cy="0" r="1" gradientTransform="translate(461 212) rotate(90) scale(118)">
+      <stop stop-color="#FFFFFF" stop-opacity=".9" />
+      <stop offset="1" stop-color="#A5E0D5" stop-opacity="0" />
+    </radialGradient>
+    <filter id="hero-shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="15" flood-color="#835B3D" flood-opacity=".18" />
+    </filter>
+    <filter id="hero-soft-shadow" x="-40%" y="-80%" width="180%" height="260%">
+      <feGaussianBlur stdDeviation="12" />
+    </filter>
+    <filter id="hero-glow-blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+  </defs>
+
+  <ellipse cx="402" cy="499" rx="236" ry="25" fill="#B8875B" opacity=".2" filter="url(#hero-soft-shadow)" />
+  <ellipse cx="427" cy="278" rx="196" ry="174" fill="url(#hero-glow)" filter="url(#hero-glow-blur)" />
+  <circle cx="468" cy="213" r="106" fill="url(#hero-glass-glow)" filter="url(#hero-glow-blur)" />
+
+  <g filter="url(#hero-shadow)">
+    <path d="M369 329 477 289l111 52-109 47-110-59Z" fill="url(#hero-box-top)" />
+    <path d="m369 329 110 59v124l-110-56V329Z" fill="#E0B27C" />
+    <path d="m479 388 109-47v123l-109 48V388Z" fill="url(#hero-box-front)" />
+    <path d="m479 388 109-47-22-21-111 45 24 23Z" fill="#FFF0CF" opacity=".72" />
+    <path d="M479 388v124" stroke="#B98250" stroke-opacity=".5" stroke-width="2" />
+    <path d="M396 376 479 411l82-35" stroke="#FCE6C2" stroke-opacity=".55" stroke-width="2" />
+    <text x="420" y="456" fill="#785334" font-family="ui-sans-serif,system-ui,sans-serif" font-size="35" font-weight="800" letter-spacing="-1.5">bit2.ai</text>
+    <text x="421" y="478" fill="#956B45" font-family="ui-sans-serif,system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="3">ONE API · MANY MODELS</text>
+  </g>
+
+  <g filter="url(#hero-shadow)">
+    <path d="m421 154 65-27 68 32-67 31-66-36Z" fill="#E8FCF7" fill-opacity=".78" />
+    <path d="m421 154 66 36v83l-66-32v-87Z" fill="url(#hero-glass)" />
+    <path d="m487 190 67-31v82l-67 32v-83Z" fill="url(#hero-glass-side)" />
+    <path d="m444 153 44 21 44-19" stroke="#FFFFFF" stroke-opacity=".72" stroke-width="2" />
+    <path d="M444 194 512 161M444 216l68-33M444 238l68-33" stroke="#FFFFFF" stroke-opacity=".6" stroke-width="2" />
+    <circle cx="444" cy="194" r="7" fill="#F58A45" />
+    <circle cx="512" cy="161" r="7" fill="#8FD6C6" />
+    <circle cx="512" cy="205" r="7" fill="#8D76D7" />
+    <circle cx="512" cy="248" r="7" fill="#F4B15F" />
+    <path d="M444 194h68M444 194l68 11M444 194l68 43" stroke="#FFFFFF" stroke-opacity=".7" stroke-width="2" />
+  </g>
+
+  <g filter="url(#hero-shadow)">
+    <g transform="translate(523 99) rotate(8)">
+      <rect width="104" height="73" rx="20" fill="#FFF8EE" stroke="#EBC5A2" stroke-width="2" />
+      <circle cx="21" cy="24" r="8" fill="#F48A45" />
+      <path d="m17 24 4-4 4 4-4 4-4-4Z" fill="#FFF5E8" />
+      <text x="38" y="30" fill="#6B5C58" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" font-weight="800">GPT-6</text>
+      <text x="18" y="54" fill="#D8662A" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="850">Astra</text>
+    </g>
+    <g transform="translate(583 227) rotate(12)">
+      <rect width="96" height="70" rx="20" fill="#F0EDFF" stroke="#D6CCF1" stroke-width="2" />
+      <circle cx="20" cy="23" r="8" fill="#8976D6" />
+      <path d="m16 23 4-4 4 4-4 4-4-4Z" fill="#F9F7FF" />
+      <text x="36" y="29" fill="#655B7F" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12" font-weight="800">GPT-5.6</text>
+      <text x="17" y="53" fill="#665B96" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="850">Sol</text>
+    </g>
+    <g transform="translate(524 302) rotate(-7)">
+      <rect width="100" height="71" rx="20" fill="#FFF0DD" stroke="#F2C89D" stroke-width="2" />
+      <circle cx="21" cy="23" r="8" fill="#F3A24F" />
+      <path d="m17 23 4-4 4 4-4 4-4-4Z" fill="#FFF9EE" />
+      <text x="38" y="29" fill="#8A644C" font-family="ui-sans-serif,system-ui,sans-serif" font-size="12" font-weight="800">GPT-5.6</text>
+      <text x="17" y="54" fill="#B36636" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="850">Terra</text>
+    </g>
+  </g>
+
+  <g opacity=".9">
+    <circle cx="614" cy="112" r="5" fill="#F48A45" />
+    <circle cx="642" cy="135" r="3" fill="#8FD6C6" />
+    <circle cx="604" cy="344" r="4" fill="#8D76D7" />
+    <path d="M602 151c38 9 58 30 65 61M596 383c28-18 49-42 58-72" stroke="#D9B89B" stroke-opacity=".42" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 9" />
+  </g>
+<g filter="url(#hero-shadow)"><image href="/bit2-rabbit-v2.jpeg" x="146" y="22" width="300" height="470" preserveAspectRatio="xMidYMid meet" /></g></svg>

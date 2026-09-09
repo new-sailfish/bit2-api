@@ -102,7 +102,7 @@ describe('personal landing layout', () => {
     expect(document.querySelector('.bit2-warm-landing')).toBeInTheDocument()
     expect(document.querySelector('.warm-hero-art img')).toHaveAttribute(
       'src',
-      '/bit2-hero-v2.svg'
+      '/bit2-hero-v3.svg'
     )
     expect(
       screen.getByRole('heading', { name: 'GPT-6 Astra' })

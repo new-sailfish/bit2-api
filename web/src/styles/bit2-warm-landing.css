@@ -594,6 +594,10 @@ For commercial licensing, please contact support@quantumnous.com
     z-index: 1;
   }
 
+  .bit2-warm-landing .warm-hero-art > img[src*='bit2-hero-v3'] {
+    mix-blend-mode: multiply;
+  }
+
   .bit2-warm-landing .warm-art-note {
     align-items: center;
     background: rgb(255 255 255 / 84%);
@@ -626,25 +630,7 @@ For commercial licensing, please contact support@quantumnous.com
   }
 
   .bit2-warm-landing .warm-hero-baseline {
-    align-items: center;
-    display: flex;
-    gap: 0.65rem;
-    justify-content: flex-start;
-    margin-top: 0.2rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .bit2-warm-landing .warm-hero-baseline span {
-    background: #f1dfcf;
-    border-radius: 999px;
-    height: 0.25rem;
-    width: 4rem;
-  }
-
-  .bit2-warm-landing .warm-hero-baseline span:first-child {
-    background: var(--warm-orange);
-    width: 7rem;
+    display: none;
   }
 
   .bit2-warm-landing .warm-feature-ribbon {
