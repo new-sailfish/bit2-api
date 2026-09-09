@@ -263,7 +263,7 @@ export function PersonalLanding(props: PersonalLandingProps) {
             <Link to='/' className='landing-brand bit2-landing-brand'>
               <span className='bit2-brand'>
                 <img
-                  src='/bit2-logo.svg'
+                  src='/bit2-app-icon.png'
                   alt=''
                   aria-hidden
                   width='42'
@@ -679,7 +679,7 @@ export function PersonalLanding(props: PersonalLandingProps) {
               <Link to='/' className='landing-brand bit2-footer-brand'>
                 <span className='bit2-brand'>
                   <img
-                    src='/bit2-logo.svg'
+                    src='/bit2-app-icon.png'
                     alt=''
                     aria-hidden
                     width='42'

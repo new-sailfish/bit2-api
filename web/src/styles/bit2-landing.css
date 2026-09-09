@@ -1,12 +1,12 @@
 @layer components {
-  .bit2-landing {
-    --landing-bg: #fcfaf6;
-    --landing-surface: #fffdf9;
-    --landing-text: #292923;
-    --landing-text-soft: #736e65;
-    --landing-line: #eae1d5;
-    --landing-indigo: #df7539;
-    --landing-indigo-dark: #ab5025;
+.bit2-landing {
+    --landing-bg: #f7f9ff;
+    --landing-surface: #ffffff;
+    --landing-text: #111936;
+    --landing-text-soft: #5d6785;
+    --landing-line: #e4e9fb;
+    --landing-indigo: #315cff;
+    --landing-indigo-dark: #5935d8;
     background: #fcfaf6;
   }
   .bit2-landing .landing-announcement {

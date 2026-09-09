@@ -118,7 +118,7 @@ if (!rootElement) {
   try {
     if (typeof window === 'undefined' || typeof document === 'undefined') return
     const isLandingPage = window.location.pathname === '/'
-    if (isLandingPage) applyFaviconToDom('/bit2-logo.svg')
+    if (isLandingPage) applyFaviconToDom('/bit2-app-icon.png')
     const apply = (name: string) => {
       document.title = name
       const metaTitle = document.querySelector(
