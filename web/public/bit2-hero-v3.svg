@@ -117,4 +117,4 @@
     <circle cx="604" cy="344" r="4" fill="#8D76D7" />
     <path d="M602 151c38 9 58 30 65 61M596 383c28-18 49-42 58-72" stroke="#D9B89B" stroke-opacity=".42" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 9" />
   </g>
-<g filter="url(#hero-shadow)"><image href="/bit2-rabbit-v2.png" x="146" y="22" width="300" height="470" preserveAspectRatio="xMidYMid meet" /></g></svg>
+<g filter="url(#hero-shadow)"><image href="/bit2-rabbit-final.png" x="146" y="22" width="300" height="470" preserveAspectRatio="xMidYMid meet" /></g></svg>
