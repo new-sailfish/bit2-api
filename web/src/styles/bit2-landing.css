@@ -527,6 +527,50 @@
   color: #fff;
 }
 
+/* Bold dark AI infrastructure direction */
+.bit2-landing {
+  background: #080b18;
+  color: #f5f7ff;
+}
+.bit2-landing .landing-announcement,
+.bit2-landing .landing-nav,
+.bit2-landing .landing-trust-strip,
+.bit2-landing .landing-features-section,
+.bit2-landing .landing-faq-section,
+.bit2-landing .landing-cta-section {
+  background: #080b18;
+  border-color: #202747;
+}
+.bit2-landing .landing-nav { background: rgba(8,11,24,.82); }
+.bit2-landing .landing-nav-links a { color: #9aa8d1; }
+.bit2-landing .landing-nav-links a:hover { color: #7dd3fc; }
+.bit2-landing .landing-hero {
+  background:
+    radial-gradient(circle at 78% 30%, rgba(53,91,255,.3), transparent 25%),
+    radial-gradient(circle at 90% 85%, rgba(168,85,247,.22), transparent 28%),
+    #080b18;
+}
+.bit2-landing .landing-hero h1 { color: #f7f9ff; }
+.bit2-landing .landing-hero-description,
+.bit2-landing .landing-hero-meta,
+.bit2-landing .landing-section-heading > p { color: #9aa8d1; }
+.bit2-landing .landing-eyebrow--hero { background: #11182f; border-color: #2b3b77; color: #7dd3fc; }
+.bit2-landing .landing-button--secondary,
+.bit2-landing .landing-login { background: #11182f; border-color: #2b3b77; color: #dce5ff; }
+.bit2-landing .landing-models-section,
+.bit2-landing .landing-steps-section { background: #0d1225; }
+.bit2-landing .landing-feature,
+.bit2-landing .landing-price-card,
+.bit2-landing .landing-step { background: #11182f; border-color: #25325b; box-shadow: 0 20px 60px rgba(0,0,0,.2); }
+.bit2-landing .landing-price-card h3,
+.bit2-landing .landing-feature h3,
+.bit2-landing .landing-step h3 { color: #f5f7ff; }
+.bit2-landing .landing-price-description,
+.bit2-landing .landing-feature p,
+.bit2-landing .landing-step p { color: #9aa8d1; }
+.bit2-landing .bit2-illustration { background: linear-gradient(145deg,#101a3d,#171338); border-color: #304794; }
+.bit2-landing .landing-footer { background: #050711; border-color: #202747; }
+
 /* Professional AI platform layout */
 .bit2-landing .landing-nav {
   position: sticky;
