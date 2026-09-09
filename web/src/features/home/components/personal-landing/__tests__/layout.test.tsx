@@ -59,8 +59,8 @@ describe('personal landing layout', () => {
       within(navigation).getByRole('link', { name: 'Models' })
     ).toHaveAttribute('href', '#models')
     expect(
-      within(navigation).getByRole('link', { name: 'Why New API' })
-    ).toHaveAttribute('href', '#features')
+      within(navigation).getByRole('link', { name: 'Architecture' })
+    ).toHaveAttribute('href', '#architecture')
     expect(screen.getByRole('link', { name: 'Sign in' })).toHaveAttribute(
       'href',
       '/sign-in'
@@ -69,12 +69,12 @@ describe('personal landing layout', () => {
       screen.getAllByRole('link', { name: 'Start for free' }).length
     ).toBeGreaterThan(0)
     expect(document.querySelector('#models')).toBeInTheDocument()
-    expect(document.querySelector('#features')).toBeInTheDocument()
+    expect(document.querySelector('#architecture')).toBeInTheDocument()
     expect(document.querySelector('#steps')).toBeInTheDocument()
     expect(document.querySelector('#faq')).toBeInTheDocument()
     expect(screen.getByText('Demo pricing')).toBeInTheDocument()
-    expect(screen.getByText('GPT-6 Astra')).toBeInTheDocument()
-    expect(screen.getByText('GPT-5.6 Sol')).toBeInTheDocument()
+    expect(screen.getAllByText('GPT-6 Astra').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('GPT-5.6 Sol').length).toBeGreaterThan(0)
     expect(
       screen.queryByText(new RegExp(['gpt', '4o'].join('-'), 'i'))
     ).toBeNull()
@@ -99,12 +99,12 @@ describe('personal landing layout', () => {
   test('uses the Bit2 rabbit mark for both brand links', () => {
     render(<PersonalLanding isAuthenticated={false} />)
 
-    const brandLinks = screen.getAllByRole('link', { name: /比特兔/i })
+    const brandLinks = screen.getAllByRole('link', { name: /bit2\.ai/i })
     expect(brandLinks).toHaveLength(2)
     for (const brandLink of brandLinks) {
       expect(brandLink.querySelector('img')).toHaveAttribute(
         'src',
-        '/bit2-logo.svg'
+        '/bit2-app-icon.png'
       )
     }
   })
@@ -114,7 +114,8 @@ describe('personal landing layout', () => {
       'zhCN',
       'translation',
       {
-        'Build with the next generation of GPT.': '使用新一代 GPT 模型',
+        'One unified API for every GPT workflow.':
+          '为每个 GPT 工作流提供统一 API',
         'Start for free': '免费开始',
         'A few useful answers before you start': '开始前的常见问题',
       },
@@ -126,7 +127,9 @@ describe('personal landing layout', () => {
     await i18next.changeLanguage('zhCN')
 
     expect(
-      await screen.findByRole('heading', { name: /使用新一代 GPT 模型/ })
+      await screen.findByRole('heading', {
+        name: /为每个 GPT 工作流提供统一 API/,
+      })
     ).toBeInTheDocument()
     expect(
       screen.getAllByRole('link', { name: '免费开始' }).length
@@ -137,7 +140,7 @@ describe('personal landing layout', () => {
     expect(document.documentElement.lang).toBe('zh-CN')
   })
 
-  test('keeps the Python integration example available below the mascot hero', () => {
+  test('keeps the Python integration example available below the relay hero', () => {
     render(<PersonalLanding isAuthenticated={false} />)
 
     const steps = document.querySelector('#steps')
