@@ -102,10 +102,14 @@ describe('personal landing layout', () => {
     expect(document.querySelector('.bit2-warm-landing')).toBeInTheDocument()
     expect(document.querySelector('.warm-hero-art img')).toHaveAttribute(
       'src',
-      '/bit2-rabbit.svg'
+      '/bit2-hero-v2.svg'
     )
-    expect(screen.getByRole('heading', { name: 'GPT-6 Astra' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'GPT-5.6 Luna' })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: 'GPT-6 Astra' })
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: 'GPT-5.6 Luna' })
+    ).toBeInTheDocument()
   })
 
   test('uses the Bit2 rabbit mark for both brand links', () => {
@@ -170,9 +174,10 @@ describe('personal landing layout', () => {
     render(<PersonalLanding isAuthenticated={false} />)
 
     const tabs = screen.getByRole('tablist', { name: 'Code examples' })
-    expect(
-      within(tabs).getByRole('tab', { name: 'Python' })
-    ).toHaveAttribute('aria-selected', 'true')
+    expect(within(tabs).getByRole('tab', { name: 'Python' })).toHaveAttribute(
+      'aria-selected',
+      'true'
+    )
 
     fireEvent.click(within(tabs).getByRole('tab', { name: 'JavaScript' }))
 

@@ -288,10 +288,10 @@ const CODE_SNIPPETS: Record<CodeTab, string> = {
     'curl https://api.bit2.ai/v1/chat/completions \\',
     '  -H "Authorization: Bearer sk-bit2-your-key" \\',
     '  -H "Content-Type: application/json" \\',
-    '  -d \'{',
+    "  -d '{",
     '    "model": "gpt-6-astra",',
     '    "messages": [{"role":"user","content":"Hello"}]',
-    '  }\'',
+    "  }'",
   ].join('\n'),
 }
 
@@ -455,11 +455,11 @@ export function PersonalLanding(props: PersonalLandingProps) {
                   <strong>05</strong>
                 </div>
                 <img
-                  src='/bit2-rabbit.svg'
+                  src='/bit2-hero-v2.svg'
                   alt=''
                   aria-hidden
-                  width='640'
-                  height='540'
+                  width='720'
+                  height='560'
                 />
                 <div className='warm-art-note warm-art-note--bottom'>
                   <i aria-hidden />
@@ -474,7 +474,10 @@ export function PersonalLanding(props: PersonalLandingProps) {
             </div>
           </section>
 
-          <section className='warm-feature-ribbon' aria-label={t('Platform status')}>
+          <section
+            className='warm-feature-ribbon'
+            aria-label={t('Platform status')}
+          >
             <div className='warm-container warm-feature-grid'>
               {HERO_FEATURES.map((feature) => (
                 <div key={feature.title} className='warm-feature-item'>
@@ -588,7 +591,9 @@ export function PersonalLanding(props: PersonalLandingProps) {
           >
             <div className='warm-container'>
               <div className='warm-section-heading warm-section-heading--center'>
-                <p className='warm-eyebrow'>{t('Developer experience & features')}</p>
+                <p className='warm-eyebrow'>
+                  {t('Developer experience & features')}
+                </p>
                 <h2>{t('A routing layer designed for real traffic.')}</h2>
                 <p>
                   {t(
@@ -649,7 +654,9 @@ export function PersonalLanding(props: PersonalLandingProps) {
                     className={`warm-plan-card${plan.featured ? ' is-featured' : ''}`}
                   >
                     {plan.featured && (
-                      <span className='warm-plan-badge'>{t('Most popular')}</span>
+                      <span className='warm-plan-badge'>
+                        {t('Most popular')}
+                      </span>
                     )}
                     <p className='warm-card-eyebrow'>{t(plan.name)}</p>
                     <h3>{t(plan.name)}</h3>
@@ -732,7 +739,9 @@ export function PersonalLanding(props: PersonalLandingProps) {
                       type='button'
                       role='tab'
                       aria-selected={activeCodeTab === tab}
-                      className={activeCodeTab === tab ? 'is-active' : undefined}
+                      className={
+                        activeCodeTab === tab ? 'is-active' : undefined
+                      }
                       onClick={() => setActiveCodeTab(tab)}
                     >
                       {tab}
@@ -798,13 +807,21 @@ export function PersonalLanding(props: PersonalLandingProps) {
           <section id='start' className='warm-cta-section'>
             <div className='warm-container'>
               <div className='warm-cta-card'>
-                <div className='warm-cta-shape warm-cta-shape--one' aria-hidden />
-                <div className='warm-cta-shape warm-cta-shape--two' aria-hidden />
+                <div
+                  className='warm-cta-shape warm-cta-shape--one'
+                  aria-hidden
+                />
+                <div
+                  className='warm-cta-shape warm-cta-shape--two'
+                  aria-hidden
+                />
                 <div className='warm-cta-copy'>
                   <p className='warm-eyebrow warm-eyebrow--light'>
                     {t('Ready to build?')}
                   </p>
-                  <h2>{t('Start your next GPT workflow with a clearer route.')}</h2>
+                  <h2>
+                    {t('Start your next GPT workflow with a clearer route.')}
+                  </h2>
                   <p>
                     {t(
                       'Create a key, connect your first request, and keep the entire path visible from the start.'
