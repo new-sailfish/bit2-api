@@ -273,16 +273,6 @@ export function PersonalLanding(props: PersonalLandingProps) {
                   比特兔<small>bit2.ai</small>
                 </span>
               </span>
-              <span className='bit2-attribution'>
-                <img
-                  src='/new-api-logo.svg'
-                  alt={t('New API')}
-                  width='16'
-                  height='16'
-                  decoding='async'
-                />
-                <span>{t('New API')}</span>
-              </span>
             </Link>
 
             <nav
