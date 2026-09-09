@@ -571,6 +571,85 @@
 .bit2-landing .bit2-illustration { background: linear-gradient(145deg,#101a3d,#171338); border-color: #304794; }
 .bit2-landing .landing-footer { background: #050711; border-color: #202747; }
 
+/* Reference direction: AI relay command center */
+.bit2-landing .landing-shell {
+  background:
+    linear-gradient(rgba(77,105,182,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77,105,182,.035) 1px, transparent 1px),
+    #080b18;
+  background-size: 48px 48px;
+}
+.bit2-landing .landing-announcement {
+  background: linear-gradient(90deg, #11183a, #17204b, #11183a);
+  color: #b9c8f5;
+}
+.bit2-landing .landing-announcement a { color: #7dd3fc; }
+.bit2-landing .landing-nav-inner { max-width: 1380px; }
+.bit2-landing .landing-nav { border-bottom: 1px solid rgba(103,135,229,.2); }
+.bit2-landing .landing-hero {
+  min-height: 46rem;
+  border-bottom: 1px solid rgba(103,135,229,.22);
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(30,112,255,.13), transparent 42%),
+    linear-gradient(180deg, rgba(12,19,48,.75), #080b18 88%);
+}
+.bit2-landing .landing-hero-inner {
+  max-width: 1380px;
+  grid-template-columns: 1fr;
+  min-height: 46rem;
+  padding-block: 4rem 3rem;
+  text-align: center;
+}
+.bit2-landing .landing-hero-copy { max-width: 58rem; margin-inline: auto; }
+.bit2-landing .landing-eyebrow--hero { margin-inline: auto; }
+.bit2-landing .landing-hero h1 {
+  max-width: 60rem;
+  margin-inline: auto;
+  font-size: clamp(3.1rem, 6vw, 6.4rem);
+  line-height: .98;
+}
+.bit2-landing .landing-hero-description { margin-inline: auto; max-width: 44rem; }
+.bit2-landing .landing-hero-actions { justify-content: center; }
+.bit2-landing .landing-hero-meta { justify-content: center; }
+.bit2-landing .bit2-illustration {
+  width: min(100%, 58rem);
+  min-height: 19rem;
+  margin: 1rem auto 0;
+  border-radius: 1.5rem;
+  padding: .8rem;
+  background: linear-gradient(145deg, rgba(19,36,78,.95), rgba(18,15,51,.97));
+  box-shadow: 0 25px 90px rgba(29,100,255,.18), inset 0 0 0 1px rgba(133,174,255,.14);
+}
+.bit2-landing .bit2-illustration img { height: 21rem; object-fit: contain; opacity: .95; }
+.bit2-landing .bit2-halo { background: radial-gradient(ellipse, rgba(45,126,255,.28), transparent 70%); }
+.bit2-landing .bit2-note { color: #8ea8df; }
+.bit2-landing .bit2-model-chip { background: rgba(26,43,91,.84); border-color: rgba(112,157,255,.42); color: #b6ccff; }
+.bit2-landing .bit2-model-chip strong { color: #fff; }
+.bit2-landing .landing-trust-strip { background: #0b1023; }
+.bit2-landing .landing-trust-inner { max-width: 1380px; }
+.bit2-landing .landing-section { position: relative; }
+.bit2-landing .landing-section-heading h2 { color: #f5f7ff; }
+.bit2-landing .landing-pricing-note { background: #111936; border-color: #2c407e; color: #a9b8df; }
+.bit2-landing .landing-pricing-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.bit2-landing .landing-price-values strong { color: #8fd8ff; }
+.bit2-landing .landing-feature-topline { margin-bottom: 1.25rem; }
+.bit2-landing .landing-feature-index { color: #6688e9; font-family: ui-monospace, monospace; }
+.bit2-landing .landing-cta-box { position: relative; overflow: hidden; }
+.bit2-landing .landing-cta-box::after {
+  content: '';
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  right: -8rem;
+  top: -12rem;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3rem rgba(255,255,255,.035), 0 0 0 7rem rgba(255,255,255,.025);
+}
+@media (max-width: 900px) {
+  .bit2-landing .landing-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* Professional AI platform layout */
 .bit2-landing .landing-nav {
   position: sticky;
