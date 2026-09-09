@@ -689,16 +689,6 @@ export function PersonalLanding(props: PersonalLandingProps) {
                     比特兔<small>bit2.ai</small>
                   </span>
                 </span>
-                <span className='bit2-attribution'>
-                  <img
-                    src='/new-api-logo.svg'
-                    alt={t('New API')}
-                    width='14'
-                    height='14'
-                    decoding='async'
-                  />
-                  <span>{t('New API')}</span>
-                </span>
               </Link>
               <p>
                 {t(
@@ -747,7 +737,7 @@ export function PersonalLanding(props: PersonalLandingProps) {
             ))}
             <div className='landing-copyright'>
               <span>
-                © 2026 QuantumNous · New API. {t('All rights reserved.')}
+                © 2026 bit2.ai. {t('All rights reserved.')}
               </span>
               <span>{t('Built for thoughtful AI products.')}</span>
             </div>

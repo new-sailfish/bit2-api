@@ -19,6 +19,7 @@ For commercial licensing, please contact support@quantumnous.com
 export function applyFaviconToDom(url: string) {
   if (typeof document === 'undefined' || !url) return
   try {
+    if (document.querySelector('link[rel~="icon"][data-brand-icon]')) return
     const next = new URL(url, window.location.href).href
     const existing =
       document.querySelectorAll<HTMLLinkElement>('link[rel~="icon"]')

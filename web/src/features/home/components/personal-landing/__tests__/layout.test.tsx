@@ -90,14 +90,10 @@ describe('personal landing layout', () => {
     expect(within(header).queryByRole('link', { name: 'Sign in' })).toBeNull()
   })
 
-  test('keeps the New API brand visible in the header and footer', () => {
+  test('does not show duplicate New API logos in the header or footer', () => {
     render(<PersonalLanding isAuthenticated={false} />)
 
-    const logos = screen.getAllByRole('img', { name: 'New API' })
-    expect(logos).toHaveLength(2)
-    for (const logo of logos) {
-      expect(logo).toHaveAttribute('src', '/new-api-logo.svg')
-    }
+    expect(screen.queryByRole('img', { name: 'New API' })).toBeNull()
   })
 
   test('uses the Bit2 rabbit mark for both brand links', () => {
