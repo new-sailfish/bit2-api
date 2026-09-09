@@ -526,3 +526,72 @@
 .bit2-landing .landing-footer-column h2 {
   color: #fff;
 }
+
+/* Professional AI platform layout */
+.bit2-landing .landing-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px) saturate(150%);
+  background: rgba(246, 248, 255, 0.78);
+}
+.bit2-landing .landing-nav-inner { min-height: 5.2rem; }
+.bit2-landing .landing-nav-links { gap: 1.8rem; }
+.bit2-landing .landing-nav-links a { font-size: .85rem; font-weight: 650; color: #566184; }
+.bit2-landing .landing-nav-links a:hover { color: #315cff; }
+.bit2-landing .landing-hero-inner {
+  min-height: 42rem;
+  padding-block: 6.5rem 5rem;
+  align-items: center;
+}
+.bit2-landing .landing-hero-copy { max-width: 42rem; }
+.bit2-landing .landing-eyebrow--hero {
+  display: inline-flex;
+  padding: .5rem .8rem;
+  border: 1px solid #cbd7ff;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  font-weight: 700;
+}
+.bit2-landing .landing-hero h1 {
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  line-height: 1.05;
+  letter-spacing: -.065em;
+  max-width: 44rem;
+}
+.bit2-landing .landing-hero h1 span {
+  display: block;
+  background: linear-gradient(100deg,#315cff,#9b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bit2-landing .landing-hero-description { max-width: 35rem; line-height: 1.8; }
+.bit2-landing .landing-hero-actions { gap: .8rem; }
+.bit2-landing .landing-hero-meta { gap: 1.4rem; flex-wrap: wrap; }
+.bit2-landing .bit2-illustration {
+  border: 1px solid rgba(115,137,231,.22);
+  border-radius: 2rem;
+  background: linear-gradient(145deg, rgba(255,255,255,.72), rgba(226,232,255,.42));
+  box-shadow: 0 30px 90px rgba(65,80,180,.18), inset 0 1px rgba(255,255,255,.8);
+  padding: 1rem;
+}
+.bit2-landing .landing-section-heading { max-width: 52rem; margin-bottom: 3rem; }
+.bit2-landing .landing-section-heading h2 { font-size: clamp(2rem, 3.6vw, 3.25rem); letter-spacing: -.05em; }
+.bit2-landing .landing-section-heading--left { margin-left: 0; }
+.bit2-landing .landing-pricing-grid { grid-template-columns: repeat(5, minmax(0,1fr)); gap: .9rem; }
+.bit2-landing .landing-price-card { padding: 1.35rem; border-radius: 1.2rem; }
+.bit2-landing .landing-price-card h3 { font-size: 1.25rem; }
+.bit2-landing .landing-feature-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+.bit2-landing .landing-feature { min-height: 14rem; border-radius: 1.2rem; padding: 1.5rem; }
+.bit2-landing .landing-steps-grid { gap: 1rem; }
+.bit2-landing .landing-step { border-radius: 1.2rem; background: rgba(255,255,255,.8); border: 1px solid #dfe5fc; }
+@media (max-width: 1100px) {
+  .bit2-landing .landing-pricing-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .bit2-landing .landing-hero-inner { padding-block: 4rem 3rem; }
+  .bit2-landing .landing-pricing-grid,
+  .bit2-landing .landing-feature-grid { grid-template-columns: 1fr; }
+  .bit2-landing .landing-hero h1 { font-size: clamp(2.8rem, 13vw, 4rem); }
+}
