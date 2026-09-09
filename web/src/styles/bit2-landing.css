@@ -436,3 +436,93 @@
     }
   }
 }
+
+/* Bit2 product direction: luminous blue-violet AI workspace */
+.bit2-landing {
+  background: #f6f8ff;
+  color: #101735;
+}
+.bit2-landing .landing-announcement,
+.bit2-landing .landing-nav,
+.bit2-landing .landing-trust-strip,
+.bit2-landing .landing-features-section,
+.bit2-landing .landing-faq-section,
+.bit2-landing .landing-cta-section {
+  background: rgba(246, 248, 255, 0.92);
+  border-color: #e1e7ff;
+}
+.bit2-landing .landing-hero {
+  background:
+    radial-gradient(circle at 78% 24%, #c7d6ff 0, transparent 26%),
+    radial-gradient(circle at 88% 84%, #e4d1ff 0, transparent 30%),
+    linear-gradient(135deg, #f8fbff 0%, #eef3ff 54%, #f7f1ff 100%);
+}
+.bit2-landing .landing-hero h1 span,
+.bit2-landing .landing-eyebrow--hero,
+.bit2-landing .landing-pricing-note strong,
+.bit2-landing .landing-pricing-note > a,
+.bit2-landing .landing-price-footer a,
+.bit2-landing .landing-eyebrow--light {
+  color: #4b55dc;
+}
+.bit2-landing .landing-button--primary,
+.bit2-landing .landing-cta-actions .landing-button--primary {
+  background: linear-gradient(135deg, #2e7bff, #7048e8);
+  box-shadow: 0 14px 30px rgba(67, 83, 224, 0.24);
+}
+.bit2-landing .landing-button--primary:hover {
+  background: linear-gradient(135deg, #246de9, #5d36cf);
+}
+.bit2-landing .landing-button--secondary,
+.bit2-landing .landing-login {
+  color: #303b72;
+  border-color: #cfd8fb;
+  background: rgba(255, 255, 255, 0.78);
+}
+.bit2-landing .landing-models-section,
+.bit2-landing .landing-steps-section {
+  background: linear-gradient(180deg, #eef3ff, #f8f6ff);
+}
+.bit2-landing .landing-feature,
+.bit2-landing .landing-price-card {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: #dfe5fc;
+  box-shadow: 0 18px 50px rgba(50, 72, 160, 0.08);
+}
+.bit2-landing .landing-price-card.is-featured {
+  background: linear-gradient(145deg, #f1f3ff, #fff);
+  border-color: #91a3ff;
+}
+.bit2-landing .landing-price-card::before {
+  background: linear-gradient(90deg, #2e7bff, #a855f7);
+}
+.bit2-landing .landing-feature-icon,
+.bit2-landing .landing-model-icon,
+.bit2-landing .landing-step-number {
+  background: linear-gradient(135deg, #e1eeff, #eee5ff);
+  color: #4255d5;
+  border-color: #cbd7ff;
+}
+.bit2-landing .landing-cta-box {
+  background: linear-gradient(120deg, #253d9f, #6e3fc7);
+  color: #fff;
+  border: 0;
+  box-shadow: 0 24px 60px rgba(54, 58, 159, 0.25);
+}
+.bit2-landing .landing-cta-box h2,
+.bit2-landing .landing-cta-box p:last-child {
+  color: #fff;
+}
+.bit2-landing .landing-footer {
+  background: #101735;
+  color: #dce4ff;
+}
+.bit2-landing .landing-footer-brand p,
+.bit2-landing .landing-footer-column a,
+.bit2-landing .landing-copyright,
+.bit2-landing .landing-social-links a {
+  color: #aab7df;
+}
+.bit2-landing .landing-footer-column h2 {
+  color: #fff;
+}
