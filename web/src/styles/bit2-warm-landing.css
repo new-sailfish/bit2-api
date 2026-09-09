@@ -47,6 +47,7 @@ For commercial licensing, please contact support@quantumnous.com
       'Microsoft YaHei',
       sans-serif;
     font-synthesis: none;
+    font-variant-ligatures: none;
     min-height: 100svh;
     overflow-x: clip;
     scroll-behavior: smooth;
@@ -324,9 +325,22 @@ For commercial licensing, please contact support@quantumnous.com
 
   .bit2-warm-landing .warm-button > svg,
   .bit2-warm-landing .warm-text-link > svg {
+    fill: none;
     height: 1rem;
     stroke: currentcolor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
     width: 1rem;
+  }
+
+  .bit2-warm-landing .warm-button--primary > svg {
+    color: #fff;
+    stroke: #fff;
+  }
+
+  .bit2-warm-landing .warm-button--primary > svg path {
+    fill: none;
   }
 
   .bit2-warm-landing .warm-button--primary {
@@ -379,7 +393,7 @@ For commercial licensing, please contact support@quantumnous.com
     color: var(--warm-orange-dark);
     font-size: 0.7rem;
     font-weight: 850;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.08em;
     margin: 0 0 0.75rem;
     text-transform: uppercase;
   }
@@ -492,7 +506,7 @@ For commercial licensing, please contact support@quantumnous.com
     font-family: 'Public Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     font-size: clamp(3rem, 4.8vw, 5rem);
     font-weight: 800;
-    letter-spacing: -0.065em;
+    letter-spacing: -0.035em;
     line-height: 1.04;
     margin: 0;
     max-width: 42rem;
@@ -1643,6 +1657,16 @@ For commercial licensing, please contact support@quantumnous.com
     justify-content: space-between;
     margin-top: 1.1rem;
     padding-top: 1.2rem;
+  }
+
+  .bit2-warm-landing :lang(en) {
+    letter-spacing: normal;
+  }
+
+  .bit2-warm-landing :lang(en) h1,
+  .bit2-warm-landing :lang(en) h2,
+  .bit2-warm-landing :lang(en) h3 {
+    letter-spacing: -0.02em;
   }
 
   .bit2-warm-landing .warm-login:focus-visible,
