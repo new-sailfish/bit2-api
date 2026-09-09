@@ -96,6 +96,18 @@ describe('personal landing layout', () => {
     expect(screen.queryByRole('img', { name: 'New API' })).toBeNull()
   })
 
+  test('uses the warm Bit2 hero artwork and model card presentation', () => {
+    render(<PersonalLanding isAuthenticated={false} />)
+
+    expect(document.querySelector('.bit2-warm-landing')).toBeInTheDocument()
+    expect(document.querySelector('.warm-hero-art img')).toHaveAttribute(
+      'src',
+      '/bit2-rabbit.svg'
+    )
+    expect(screen.getByRole('heading', { name: 'GPT-6 Astra' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'GPT-5.6 Luna' })).toBeInTheDocument()
+  })
+
   test('uses the Bit2 rabbit mark for both brand links', () => {
     render(<PersonalLanding isAuthenticated={false} />)
 
@@ -104,7 +116,7 @@ describe('personal landing layout', () => {
     for (const brandLink of brandLinks) {
       expect(brandLink.querySelector('img')).toHaveAttribute(
         'src',
-        '/bit2-app-icon.png'
+        '/bit2-logo.svg'
       )
     }
   })
@@ -114,8 +126,10 @@ describe('personal landing layout', () => {
       'zhCN',
       'translation',
       {
-        'One unified API for every GPT workflow.':
-          '为每个 GPT 工作流提供统一 API',
+        'One API, connect every AI model': '一个接口，连接所有 AI 模型',
+        'Powerful AI, within reach.': '让强大的 AI 触手可及',
+        'Bit2.ai makes powerful AI accessible through one reliable, OpenAI-compatible gateway. Connect your product to GPT-6 and GPT-5.6 with clear routing, transparent pricing, and a console your team can understand.':
+          '通过稳定的兼容 OpenAI 网关接入 GPT-6 和 GPT-5.6',
         'Start for free': '免费开始',
         'A few useful answers before you start': '开始前的常见问题',
       },
@@ -128,7 +142,7 @@ describe('personal landing layout', () => {
 
     expect(
       await screen.findByRole('heading', {
-        name: /为每个 GPT 工作流提供统一 API/,
+        name: /一个接口，连接所有 AI 模型/,
       })
     ).toBeInTheDocument()
     expect(
@@ -149,6 +163,24 @@ describe('personal landing layout', () => {
     )
     expect(steps?.querySelector('code')).toHaveTextContent(
       'client.chat.completions.create'
+    )
+  })
+
+  test('switches the quickstart code example when a language tab is selected', () => {
+    render(<PersonalLanding isAuthenticated={false} />)
+
+    const tabs = screen.getByRole('tablist', { name: 'Code examples' })
+    expect(
+      within(tabs).getByRole('tab', { name: 'Python' })
+    ).toHaveAttribute('aria-selected', 'true')
+
+    fireEvent.click(within(tabs).getByRole('tab', { name: 'JavaScript' }))
+
+    expect(
+      within(tabs).getByRole('tab', { name: 'JavaScript' })
+    ).toHaveAttribute('aria-selected', 'true')
+    expect(document.querySelector('#docs code')).toHaveTextContent(
+      'const client = new OpenAI'
     )
   })
 
