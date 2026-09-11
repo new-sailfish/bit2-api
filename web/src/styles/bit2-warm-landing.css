@@ -17,6 +17,56 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 For commercial licensing, please contact support@quantumnous.com
 */
 @layer components {
+  .bit2-warm-landing .warm-hero { background: linear-gradient(135deg, #fffdf9 0%, #fff8ef 52%, #fff1df 100%); min-height: 720px; }
+  .bit2-warm-landing .warm-hero-grid { align-items: center; gap: clamp(2rem, 5vw, 6rem); }
+  .bit2-warm-landing .warm-hero-copy { padding-block: 4rem 3rem; }
+  .bit2-warm-landing .warm-eyebrow--hero { color: #67758a; font-size: 1.05rem; }
+  .bit2-warm-landing .warm-hero h1 { color: #142033; font-size: clamp(4rem, 7vw, 7.4rem); line-height: .94; letter-spacing: -.08em; max-width: 760px; }
+  .bit2-warm-landing .warm-hero h1 span { color: #ef6f26; display: block; }
+  .bit2-warm-landing .warm-hero-description { color: #68778b; font-size: 1.22rem; line-height: 1.75; max-width: 570px; }
+  .bit2-warm-landing .warm-hero-copy { max-width: 700px; }
+  .bit2-warm-landing .warm-hero-copy { transform: translateY(-3rem); }
+  .bit2-warm-landing .warm-hero-art { transform: translateY(3rem); }
+  .bit2-warm-landing .warm-eyebrow--hero { margin-bottom: 1.4rem; }
+  .bit2-warm-landing .warm-hero-actions { margin-top: 2.2rem; }
+  .bit2-warm-landing .warm-button--primary { background: #f47728; border-color: #f47728; border-radius: 999px; box-shadow: 0 12px 28px rgb(244 119 40 / 24%); }
+  .bit2-warm-landing .warm-button--ghost { background: rgb(255 255 255 / 72%); border-color: #eadfd4; border-radius: 999px; color: #253044; }
+  .bit2-warm-landing .warm-hero-art { min-height: 540px; padding-top: 0; }
+  .bit2-warm-landing .warm-hero-art > img { margin-top: -3rem; }
+  .bit2-warm-landing .warm-art-backdrop { background: radial-gradient(circle, rgb(244 119 40 / 18%), transparent 66%); }
+  .bit2-warm-landing .warm-hero-art > img { filter: drop-shadow(0 28px 25px rgb(111 66 35 / 20%)); max-height: 520px; object-fit: contain; }
+  .bit2-warm-landing .warm-routing-map { inset: 5% 0 0; pointer-events: none; position: absolute; z-index: 3; }
+  .bit2-warm-landing .warm-routing-map::before { display: none; }
+  .bit2-warm-landing .warm-routing-node { align-items: center; border-radius: 1.15rem; box-shadow: 0 18px 32px rgb(90 54 27 / 20%); display: flex; height: 4.2rem; justify-content: center; position: absolute; width: 4.8rem; }
+  .bit2-warm-landing .warm-routing-node { animation: bit2-model-float 5.5s ease-in-out infinite; gap: .45rem; }
+  .bit2-warm-landing .warm-routing-node b { color: #fff; font-size: 1.8rem; }
+  .bit2-warm-landing .warm-routing-node--claude { animation-delay: -.9s; }
+  .bit2-warm-landing .warm-routing-node--deepseek { animation-delay: -1.8s; }
+  .bit2-warm-landing .warm-routing-node--grok { animation-delay: -2.7s; }
+  .bit2-warm-landing .warm-routing-node--gemini { animation-delay: -3.6s; }
+  @keyframes bit2-model-float { 0%, 100% { margin-top: 0; } 50% { margin-top: -.65rem; } }
+  .bit2-warm-landing .warm-routing-node--chatgpt { left: 8%; top: 4rem; }
+  .bit2-warm-landing .warm-routing-node--claude { left: 23%; top: 1rem; }
+  .bit2-warm-landing .warm-routing-node--deepseek { right: 8%; top: 5rem; }
+  .bit2-warm-landing .warm-routing-node--grok { right: 15%; top: 19rem; }
+  .bit2-warm-landing .warm-routing-node--gemini { left: 12%; top: 21rem; }
+  .bit2-warm-landing .warm-routing-node--chatgpt { background: #bfe8dc; }
+  .bit2-warm-landing .warm-routing-node--claude { background: #ffdcb9; }
+  .bit2-warm-landing .warm-routing-node--deepseek { background: #c9ddff; }
+  .bit2-warm-landing .warm-routing-node--grok { background: #d8d5ff; }
+  .bit2-warm-landing .warm-routing-node--gemini { background: #fff0cf; }
+  .bit2-warm-landing .warm-model-orbit { inset: 8% 0 auto; pointer-events: none; position: absolute; z-index: 3; }
+  .bit2-warm-landing .warm-model-card { align-items: center; background: rgb(255 255 255 / 88%); border: 1px solid rgb(255 255 255 / 90%); border-radius: 1.15rem; box-shadow: 0 16px 30px rgb(98 61 38 / 18%), inset 0 1px 0 #fff; color: #243148; display: flex; font-size: .86rem; font-weight: 800; gap: .3rem; padding: .85rem 1rem; position: absolute; transform: rotate(-7deg); }
+  .bit2-warm-landing .warm-model-card--gpt { left: 12%; top: 1rem; background: #d9f4e9; }
+  .bit2-warm-landing .warm-model-card--sol { left: 34%; top: -2rem; background: #e6e0ff; transform: rotate(8deg); }
+  .bit2-warm-landing .warm-model-card--claude { right: 25%; top: 2rem; background: #ffe4c5; transform: rotate(-10deg); }
+  .bit2-warm-landing .warm-model-card--gemini { right: 7%; top: 7rem; background: #dce9ff; transform: rotate(9deg); }
+  .bit2-warm-landing .warm-model-card--deepseek { right: 3%; top: 15rem; background: #cfe4ff; transform: rotate(-5deg); }
+  .bit2-warm-landing .warm-model-card--mistral { left: 8%; top: 15rem; background: #fff0d6; transform: rotate(7deg); }
+  .bit2-warm-landing .landing-hero-models { gap: .6rem; margin-top: -1.5rem; }
+  .bit2-warm-landing .landing-hero-models span { background: rgb(255 255 255 / 90%); border: 1px solid #f0dccb; color: #3a4658; box-shadow: 0 8px 22px rgb(110 71 40 / 10%); }
+  .bit2-warm-landing .landing-hero-models { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-top: -2rem; position: relative; z-index: 2; }
+  .bit2-warm-landing .landing-hero-models span { background: rgb(255 255 255 / 82%); border: 1px solid rgb(244 119 40 / 30%); border-radius: 999px; box-shadow: 0 8px 24px rgb(93 52 30 / 12%); color: #6a3d28; font-size: .72rem; font-weight: 700; padding: .42rem .7rem; }
   .bit2-warm-landing {
     --warm-bg: #fffaf4;
     --warm-bg-soft: #fff5eb;
@@ -444,7 +494,7 @@ For commercial licensing, please contact support@quantumnous.com
       var(--warm-bg);
     min-height: 39rem;
     overflow: hidden;
-    padding: 4.9rem 0 1.2rem;
+    padding: 2.2rem 0 1.2rem;
     position: relative;
   }
 
@@ -607,7 +657,7 @@ For commercial licensing, please contact support@quantumnous.com
     right: -3.5rem;
     top: 0.25rem;
     transform: rotate(-1deg);
-    width: min(700px, 116%);
+    width: min(740px, 122%);
     z-index: 1;
   }
 

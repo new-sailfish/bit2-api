@@ -348,7 +348,7 @@ export function PersonalLanding(props: PersonalLandingProps) {
           <div className='warm-container warm-nav-inner'>
             <Link to='/' className='warm-brand'>
               <img
-                src='/bit2-logo.svg'
+                src='/bit2-app-icon.png'
                 alt=''
                 aria-hidden
                 width='44'
@@ -450,12 +450,8 @@ export function PersonalLanding(props: PersonalLandingProps) {
                 aria-label={t('Developer integration preview')}
               >
                 <div className='warm-art-backdrop' aria-hidden />
-                <div className='warm-art-note warm-art-note--top'>
-                  <span>{t('Available routes')}</span>
-                  <strong>05</strong>
-                </div>
                 <img
-                  src='/bit2-hero-v3.svg'
+                  src='/bit2-banner-final.png'
                   alt=''
                   aria-hidden
                   width='720'
@@ -840,7 +836,7 @@ export function PersonalLanding(props: PersonalLandingProps) {
             <section className='warm-footer-brand'>
               <Link to='/' className='warm-brand'>
                 <img
-                  src='/bit2-logo.svg'
+                  src='/bit2-app-icon.png'
                   alt=''
                   aria-hidden
                   width='44'
